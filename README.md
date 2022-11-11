@@ -14,7 +14,7 @@ https://www.dropbox.com/sh/0wqw8fmiwrzr8ef/AABQijjQM522INXX1FCdamzma?dl=0
  while ```SQL``` was is used to query and filter the csv file with the help of ```python programming``` and ```ggolot2``` in ```r programming``` is equally used in visualizing the data.
 
 ### Entity Relationship Diagram (ERD)
-![Entity Relationship Diagram](Learn-Sql-Basics-for-Data-Science-Capstone-Project\src\img\ERD.jpg "Entity Relationship Diagram")
+![Entity Relationship Diagram](Eddiddi\Learn-Sql-Basics-for-Data-Science-Capstone-Project\src\img\ERD.jpg "Entity Relationship Diagram")
 
 This analysis covers the descriptive statistics, questions of interest and hypothesis.
 
@@ -22,13 +22,13 @@ This analysis covers the descriptive statistics, questions of interest and hypot
 Q1: If  there exist athletes who featured in two or more year seasons?
 
 Q2: To investigate Gender-based athlete engagement distribution across different years and Seasons.
-![Gender-based athlete engagement distribution](Learn-Sql-Basics-for-Data-Science-Capstone-Project\src\img\gb_plot.png "Gender-based athlete engagement distribution")
+![Gender-based athlete engagement distribution](Eddiddi\Learn-Sql-Basics-for-Data-Science-Capstone-Project\src\img\gb_plot.png "Gender-based athlete engagement distribution")
 
 Q3: Cummulative Sport engagement based on athlete engagement.
-![Cummulative Sport engagement](Learn-Sql-Basics-for-Data-Science-Capstone-Project\src\img\sae_1_plot.jpg "Cummulative Sport engagement based on athlete engagement")
+![Cummulative Sport engagement](Eddiddi\Learn-Sql-Basics-for-Data-Science-Capstone-Project\src\img\sae_1_plot.jpg "Cummulative Sport engagement based on athlete engagement")
 
 Q4: Gender with the most medals.
-![Gender with the most medals](Learn-Sql-Basics-for-Data-Science-Capstone-Project\src\img\gwmm_plot.jpg "Gender with the most medals")
+![Gender with the most medals](Eddiddi\Learn-Sql-Basics-for-Data-Science-Capstone-Project\src\img\gwmm_plot.jpg "Gender with the most medals")
 
 ### Hypothesis 
 
