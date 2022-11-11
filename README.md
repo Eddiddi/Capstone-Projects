@@ -14,7 +14,7 @@ https://www.dropbox.com/sh/0wqw8fmiwrzr8ef/AABQijjQM522INXX1FCdamzma?dl=0
  while ```SQL``` was is used to query and filter the csv file with the help of ```python programming``` and ```ggolot2``` in ```r programming``` is equally used in visualizing the data.
 
 ### Entity Relationship Diagram (ERD)
-![Entity Relationship Diagram](Eddiddi\Learn-Sql-Basics-for-Data-Science-Capstone-Project\src\img\ERD.jpg "Entity Relationship Diagram")
+![Entity Relationship Diagram](https://github.com/Eddiddi/Learn-Sql-Basics-for-Data-Science-Capstone-Project/blob/main/src/img/ERD.jpg "Entity Relationship Diagram")
 
 This analysis covers the descriptive statistics, questions of interest and hypothesis.
 
@@ -22,13 +22,16 @@ This analysis covers the descriptive statistics, questions of interest and hypot
 Q1: If  there exist athletes who featured in two or more year seasons?
 
 Q2: To investigate Gender-based athlete engagement distribution across different years and Seasons.
-![Gender-based athlete engagement distribution](Eddiddi\Learn-Sql-Basics-for-Data-Science-Capstone-Project\src\img\gb_plot.png "Gender-based athlete engagement distribution")
+![Gender-based athlete engagement distribution](https://github.com/Eddiddi/Learn-Sql-Basics-for-Data-Science-Capstone-Project/blob/main/src/img/gb_plot.png "Gender-based athlete engagement distribution")
 
 Q3: Cummulative Sport engagement based on athlete engagement.
-![Cummulative Sport engagement](Eddiddi\Learn-Sql-Basics-for-Data-Science-Capstone-Project\src\img\sae_1_plot.jpg "Cummulative Sport engagement based on athlete engagement")
+![Cummulative Sport engagement](https://github.com/Eddiddi/Learn-Sql-Basics-for-Data-Science-Capstone-Project/blob/main/src/img/sae_plot.png "Cummulative Sport engagement based on athlete engagement")
 
-Q4: Gender with the most medals.
-![Gender with the most medals](Eddiddi\Learn-Sql-Basics-for-Data-Science-Capstone-Project\src\img\gwmm_plot.jpg "Gender with the most medals")
+Q4: Gender-based Performance of athlete in sporting events
+![Gender-based in sporting events](https://github.com/Eddiddi/Learn-Sql-Basics-for-Data-Science-Capstone-Project/blob/main/src/img/sae_1_plot.jpg "Gender-based in sporting events")
+
+Q5: Gender with the most medals.
+![Gender with the most medals](https://github.com/Eddiddi/Learn-Sql-Basics-for-Data-Science-Capstone-Project/blob/main/src/img/gwmm_plot.jpg "Gender with the most medals")
 
 ### Hypothesis 
 
