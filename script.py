@@ -71,7 +71,7 @@ sae_plot
 # with some sporting categories having less number of athletes than in other sport categories.
 
 
-##Q4: Gender-based in sporting events.
+##Q4: Gender-based Performance Pyramid in sporting events.
 #python & SQL code:
 
 sae_1 = pysqldf("SELECT Year, Sport, COUNT(Gender) AS Total, Gender FROM (SELECT Year,Name,Sport, Season,Sex, CASE WHEN Sex = 'M' OR 'Male' THEN 'Male' WHEN Sex = 'F' OR 'Female' THEN 'Female' ELSE NULL END AS Gender FROM athletes_events)GROUP BY Year, Sport, Gender ORDER BY Year ASC")
