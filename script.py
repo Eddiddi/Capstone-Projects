@@ -1,39 +1,38 @@
 #Please install the following python packages where needed.
-#link to the dataset:
+#Click [dataset](https://www.dropbox.com/sh/0wqw8fmiwrzr8ef/AABQijjQM522INXX1FCdamzma?dl=0) to download the dataset
 
-# https://www.dropbox.com/sh/0wqw8fmiwrzr8ef/AABQijjQM522INXX1FCdamzma?dl=0
-
-#python Packages
+#Python Packages
 
 import pandas as pd
-from pandasql import sqldf
+from pandasql import sqldf #install using: !pip install pandasql
 pysqldf = lambda q: sqldf(q, globals())
-##R packages
 
-%load_ext rpy2.ipython
-library(ggplot2)
-library(dplyr)
-library(scales)
+#R packages
 
-#import file using pandas
+%load_ext rpy2.ipython #install using: pip install rpy2
+library(ggplot2) # install using: install.packages("ggplot2")
+library(dplyr) # install using: install.packages("dplyr")
+library(scales) # install using: install.packages("scales")
+
+#Import file using pandas
 athletes_events = pd.read_csv("athlete_events.csv")
 athletes_events
 
-#Q1: If  there exist athletes who featured in two or more year seasons?
+#Q1: Are they athletes who featured in two or more year seasons?
 #python code:
 
-m2= pysqldf("SELECT Name, Sport, COUNT(Name) AS `Number of Appearances` FROM athletes_events GROUP BY Name, Sport ORDER BY `Number of Appearances` DESC ")
-m2
+more_than_2x = pysqldf("SELECT Name, Sport, COUNT(Name) AS `Number of Appearances` FROM athletes_events GROUP BY Name, Sport ORDER BY `Number of Appearances` DESC ")
+more_than_2x
 #ANS: YES
 
 #Q2: To investigate Gender-based athlete engagement distribution across different years and Seasons.
 #python code:
 
-gb_dist_plot_data=pysqldf("SELECT Year, COUNT(Gender) AS Total, Gender FROM (SELECT Year,Name, Season,Sex, CASE WHEN Sex = 'M' OR 'Male' THEN 'Male' WHEN Sex = 'F' OR 'Female' THEN 'Female' ELSE NULL END AS Gender FROM athletes_events)GROUP BY Year, Gender ORDER BY Year ASC")
+gb_dist_plot_data = pysqldf("SELECT Year, COUNT(Gender) AS Total, Gender FROM (SELECT Year,Name, Season,Sex, CASE WHEN Sex = 'M' OR 'Male' THEN 'Male' WHEN Sex = 'F' OR 'Female' THEN 'Female' ELSE NULL END AS Gender FROM athletes_events)GROUP BY Year, Gender ORDER BY Year ASC")
 gb_dist_plot_data
 
-# From the dataset and data visualization above, year 1896 has no female athletic participation. 
-# And up from the preceeding year(1900)down to 2016 there has been a significant increase in female athletic 
+# From the dataset and data visualization above, the year 1896 has no female athletic participation, and 
+# up from the preceeding year(1900) down to 2016 there has been a significant increase in female athletic 
 # participation in the Olympics. Similarly, the Men's athletic engagements right from inception has been overwhelming,
 # though not steady, the numbers still outrun that of the women throughout the 120years Olympic games coverage
 
@@ -102,9 +101,6 @@ gwmm_plot<- gwmm_plot + theme(axis.text.y = element_text(size = 10, face = "bold
 gwmm_plot<- gwmm_plot + theme(axis.title = element_text(face = "bold", size = 15))
 gwmm_plot
 
-
-
-
 # Hypothesis 
 
 # Did athletes who featured in different seasons win more medals than other athletes?
@@ -113,13 +109,20 @@ gwmm_plot
 more_than_2x = pysqldf("SELECT binary_medal, COUNT(CASE WHEN binary_medal = 1 AND Medal IS NOT NULL THEN 1 END)AS Treatment, COUNT(CASE WHEN binary_medal = 0 AND Medal IS NOT NULL THEN 0 END) AS Control, COUNT(CASE WHEN binary_medal = 0 THEN 0 ELSE NULL END) AS `Control Total`, COUNT(CASE WHEN binary_medal= 1 THEN 1 ELSE NULL END) AS `Treatment Total` FROM (SELECT Name, COUNT(Name), Medal, CASE WHEN COUNT(Name) = 1  THEN 1 WHEN COUNT(Name) >= 2 THEN 0 END AS binary_medal FROM athletes_events GROUP BY Name) WHERE binary_medal IS NOT NULL GROUP BY binary_medal")
 more_than_2x
 
++---------------------+-----------+---------+---------+-------+-----------------+
+|   | Test Assignment |	Treatment |	Control	| Control  Total |	Treatment Total |
++ --+-----------------------------+--------------------------+------------------+
+| 0	|      0	      |   0	      |  7543	|      57723	 |        0         |
++ --+-----------------------------+---------+----------------+------------------+  
+| 1	|      1          |	 11492	  |    0	|   0	         |      77009       |
++-------------------------------------------------------------------------------+
+
 #findings:
 
 #The binary values of 0 and 1 which serves as the control and treatment respectively of the hypothesis for athletes 
 # with more than one appearance throughout the 120 years Olympics competition winning more Medals than athletes with 
 # just an appearance throughout the 120years Olympics competition. The resulting values are tested using
-# ABBA A/B testing statistics
-# (https://thumbtack.github.io/abba/demo/abba.html#Baseline=11492%2C77009&Variation+1=7543%2C57723&abba%3AintervalConfidenceLevel=0.95&abba%3AuseMultipleTestCorrection=true)
+# [ABBA A/B testing statistics](https://thumbtack.github.io/abba/demo/abba.html#Baseline=11492%2C77009&Variation+1=7543%2C57723&abba%3AintervalConfidenceLevel=0.95&abba%3AuseMultipleTestCorrection=true) 
 # to verify this hypothesis.Results at 0.95 Confidence Interval show that there is a significant relationship 
 # between control and treatment as p-value is less than alpha = 0.05, success rate is 15% and 
 # an improvement rate of 14%. Therefore, we reject the null hypothesis and conclude that athelete who featured more 
