@@ -33,17 +33,7 @@ Q5: Gender with the most medals.
 
 
 ### Hypothesis 
-
 Did athletes who featured in different seasons win more medals than other athletes?
-Results:
-+---------------------+-----------+---------+---------+-------+-----------------+
-|   | Test Assignment |	Treatment |	Control	| Control  Total |	Treatment Total |
-+ --+-----------------------------+--------------------------+------------------+
-| 0	|      0	      |   0	      |  7543	|      57723	 |        0         |
-+ --+-----------------------------+---------+----------------+------------------+  
-| 1	|      1          |	 11492	  |    0	|   0	         |      77009       |
-+-------------------------------------------------------------------------------+
-
 
 ### Data Visualization
 Figure 1: Shows the distribution of athlete category (Male & Female) across various years. 
