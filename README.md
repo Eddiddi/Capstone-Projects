@@ -7,7 +7,7 @@ SportsStats is a sports analytics firm partnering with local news and elite pers
 
 Furthermore, this analysis is meant to help SportsStats service her clientele.
 Please find the link to the dataset given below:
-[SportsStats]https://www.dropbox.com/sh/0wqw8fmiwrzr8ef/AABQijjQM522INXX1FCdamzma?dl=0
+[SportsStats](https://www.dropbox.com/sh/0wqw8fmiwrzr8ef/AABQijjQM522INXX1FCdamzma?dl=0)
 
 ### Approach
  ```python programming``` ```pandas```  was used to load the csv dataset locally using ```pd.read_csv()```
@@ -35,18 +35,31 @@ Q5: Gender with the most medals.
 ### Hypothesis 
 
 Did athletes who featured in different seasons win more medals than other athletes?
+Results:
++---------------------+-----------+---------+---------+-------+-----------------+
+|   | Test Assignment |	Treatment |	Control	| Control  Total |	Treatment Total |
++ --+-----------------------------+--------------------------+------------------+
+| 0	|      0	      |   0	      |  7543	|      57723	 |        0         |
++ --+-----------------------------+---------+----------------+------------------+  
+| 1	|      1          |	 11492	  |    0	|   0	         |      77009       |
++-------------------------------------------------------------------------------+
+
 
 ### Data Visualization
-Figure 1: Shows the distribution of athlete category (Male & Female) across various years. \n
+Figure 1: Shows the distribution of athlete category (Male & Female) across various years. 
+
 ![Gender-based athlete engagement distribution](https://github.com/Eddiddi/Learn-Sql-Basics-for-Data-Science-Capstone-Project/blob/main/src/img/gb_plot.png "Gender-based athlete engagement distribution")
 
-Figure 2: Shows sporting categories with highest to lowest athletes participation. \n
+Figure 2: Shows sporting categories with highest to lowest athletes participation. 
+
 ![Cummulative Sport engagement](https://github.com/Eddiddi/Learn-Sql-Basics-for-Data-Science-Capstone-Project/blob/main/src/img/sae_plot.png "Cummulative Sport engagement based on athlete engagement")
 
-Figure 3: Shows a pyramid describing the participation of Male athletes and Femala athletes. \n
+Figure 3: Shows a pyramid describing the participation of Male athletes and Femala athletes. 
+
 ![Gender-based in sporting events](https://github.com/Eddiddi/Learn-Sql-Basics-for-Data-Science-Capstone-Project/blob/main/src/img/sae_1_plot.jpg "Gender-based in sporting events")
 
-Figure 4: Shows a bar plot of medals won by the Male & Female athletes respectively. \n
+Figure 4: Shows a bar plot of medals won by the Male & Female athletes respectively.
+
 ![Gender with the most medals](https://github.com/Eddiddi/Learn-Sql-Basics-for-Data-Science-Capstone-Project/blob/main/src/img/gwmm_plot.jpg "Gender with the most medals")
 
 ### Limitations
@@ -56,7 +69,7 @@ The following limitations serve as the challenges encountered in the cause of th
 2. ```pandasql``` for SQL doesn't support code formatting for better code presentations
 
 ### Recommendations
-The analysis carried out shows \n
+The analysis carried out shows 
 1. Low female athletes participation across various sport and seasons like their male counterparts, and as such countries are advised to develop women's teams so as to have better female representation.
 
 2. Investments in sport with low athlete engagement is advised as observed in sporting events such as Aeronautics, Basque Pelota, Roque, Jeu De Paume, Racquets etc.	
