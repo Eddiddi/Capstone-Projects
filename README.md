@@ -12,7 +12,7 @@ Please find the link to the dataset given below:
 ### Approach
  ```python programming``` ```pandas```  was used to load the csv dataset locally using ```pd.read_csv()```
  while ```SQL```  is used to query and filter the loaded csv file. 
- The ```ggolot2```library in ```r programming``` was used in visualizing the data.
+ The ```ggplot2```library in ```r programming``` was used in visualizing the data.
 
 ### Entity Relationship Diagram (ERD)
 The diagram below is the Entity relationship diagram showing the relationship between tables.
